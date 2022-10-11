@@ -1,0 +1,5 @@
+package main
+//go:cgo_import_dynamic __stdoutp __stdoutp ""
+//go:cgo_import_dynamic fflush fflush ""
+//go:cgo_import_dynamic puts puts ""
+//go:cgo_import_dynamic _ _ "/usr/lib/libSystem.B.dylib"

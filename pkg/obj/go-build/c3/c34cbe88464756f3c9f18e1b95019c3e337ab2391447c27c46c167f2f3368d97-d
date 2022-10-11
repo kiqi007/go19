@@ -1,0 +1,3 @@
+package cgolife
+//go:cgo_import_dynamic __assert_rtn __assert_rtn ""
+//go:cgo_import_dynamic _ _ "/usr/lib/libSystem.B.dylib"

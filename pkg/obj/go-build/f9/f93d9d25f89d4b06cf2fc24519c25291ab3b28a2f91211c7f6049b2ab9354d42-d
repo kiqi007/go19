@@ -1,0 +1,15 @@
+# test log
+stat testdata
+open testdata
+open testdata/allnew.txt
+open testdata/allold.txt
+open testdata/basic.txt
+open testdata/dups.txt
+open testdata/end.txt
+open testdata/eof.txt
+open testdata/eof1.txt
+open testdata/eof2.txt
+open testdata/long.txt
+open testdata/same.txt
+open testdata/start.txt
+open testdata/triv.txt

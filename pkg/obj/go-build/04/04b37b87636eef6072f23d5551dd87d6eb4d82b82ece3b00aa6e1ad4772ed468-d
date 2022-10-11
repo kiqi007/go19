@@ -1,0 +1,4 @@
+# test log
+open testdata/test.types
+open testdata/test.types.globs2
+open testdata/test.types

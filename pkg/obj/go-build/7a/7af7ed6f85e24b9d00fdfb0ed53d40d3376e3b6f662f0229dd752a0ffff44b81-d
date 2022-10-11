@@ -1,0 +1,3 @@
+package a
+//go:cgo_import_dynamic malloc malloc ""
+//go:cgo_import_dynamic _ _ "/usr/lib/libSystem.B.dylib"

@@ -1,0 +1,667 @@
+# net/netip
+./leaf_alts.go:10:6: can inline stringsLastIndexByte
+./leaf_alts.go:19:6: can inline beUint64
+./leaf_alts.go:25:6: can inline bePutUint64
+./leaf_alts.go:37:6: can inline bePutUint32
+./leaf_alts.go:45:6: can inline leUint16
+./leaf_alts.go:50:6: can inline lePutUint16
+./netip.go:98:12: inlining call to beUint64
+./netip.go:99:12: inlining call to beUint64
+./netip.go:76:6: can inline IPv6LinkLocalAllNodes
+./netip.go:79:6: can inline IPv6Unspecified
+./netip.go:85:6: can inline AddrFrom4
+./netip.go:82:6: can inline IPv4Unspecified
+./netip.go:82:47: inlining call to AddrFrom4
+./netip.go:110:12: inlining call to beUint64
+./netip.go:111:12: inlining call to beUint64
+./netip.go:198:18: inlining call to AddrFrom4
+./netip.go:471:6: can inline Addr.Is6
+./netip.go:490:12: inlining call to Addr.Is6
+./netip.go:497:27: inlining call to intern.GetByString
+./netip.go:357:6: can inline Addr.v4
+./netip.go:228:26: inlining call to IPv6Unspecified
+./netip.go:277:18: inlining call to Addr.v4
+./netip.go:278:20: inlining call to Addr.v4
+./netip.go:279:20: inlining call to Addr.v4
+./netip.go:280:20: inlining call to Addr.v4
+./netip.go:138:6: can inline MustParseAddr
+./netip.go:155:26: inlining call to strconv.Quote
+./netip.go:155:26: inlining call to strconv.quoteWith
+./netip.go:155:66: inlining call to strconv.Quote
+./netip.go:155:66: inlining call to strconv.quoteWith
+./netip.go:157:25: inlining call to strconv.Quote
+./netip.go:157:25: inlining call to strconv.quoteWith
+./netip.go:348:19: inlining call to AddrFrom4
+./uint128.go:78:6: can inline (*uint128).halves
+./netip.go:363:6: can inline Addr.v6
+./netip.go:364:31: inlining call to (*uint128).halves
+./netip.go:369:6: can inline Addr.v6u16
+./netip.go:370:32: inlining call to (*uint128).halves
+./netip.go:378:6: can inline Addr.isZero
+./netip.go:387:6: can inline Addr.IsValid
+./netip.go:394:6: can inline Addr.BitLen
+./netip.go:405:6: can inline Addr.Zone
+./netip.go:409:21: inlining call to intern.(*Value).Get
+./netip.go:417:21: inlining call to Addr.BitLen
+./netip.go:417:35: inlining call to Addr.BitLen
+./netip.go:438:11: inlining call to Addr.Is6
+./netip.go:439:20: inlining call to Addr.Zone
+./netip.go:439:20: inlining call to intern.(*Value).Get
+./netip.go:439:32: inlining call to Addr.Zone
+./netip.go:439:32: inlining call to intern.(*Value).Get
+./netip.go:453:6: can inline Addr.Less
+./netip.go:455:6: can inline Addr.lessOrEq
+./netip.go:460:6: can inline Addr.Is4
+./netip.go:465:6: can inline Addr.Is4In6
+./netip.go:466:15: inlining call to Addr.Is6
+./netip.go:479:6: can inline Addr.Unmap
+./netip.go:480:14: inlining call to Addr.Is4In6
+./netip.go:480:14: inlining call to Addr.Is6
+./netip.go:503:6: can inline Addr.withoutZone
+./netip.go:504:12: inlining call to Addr.Is6
+./netip.go:512:6: can inline Addr.hasZone
+./netip.go:520:11: inlining call to Addr.Is4
+./netip.go:521:15: inlining call to Addr.v4
+./netip.go:521:34: inlining call to Addr.v4
+./netip.go:525:11: inlining call to Addr.Is6
+./netip.go:526:18: inlining call to Addr.v6u16
+./netip.go:526:18: inlining call to (*uint128).halves
+./netip.go:532:6: can inline Addr.IsLoopback
+./netip.go:535:11: inlining call to Addr.Is4
+./netip.go:536:15: inlining call to Addr.v4
+./netip.go:540:11: inlining call to Addr.Is6
+./netip.go:547:6: can inline Addr.IsMulticast
+./netip.go:550:11: inlining call to Addr.Is4
+./netip.go:551:15: inlining call to Addr.v4
+./netip.go:555:11: inlining call to Addr.Is6
+./netip.go:563:6: can inline Addr.IsInterfaceLocalMulticast
+./netip.go:566:11: inlining call to Addr.Is6
+./netip.go:567:18: inlining call to Addr.v6u16
+./netip.go:567:18: inlining call to (*uint128).halves
+./netip.go:576:11: inlining call to Addr.Is4
+./netip.go:577:15: inlining call to Addr.v4
+./netip.go:577:34: inlining call to Addr.v4
+./netip.go:577:51: inlining call to Addr.v4
+./netip.go:581:11: inlining call to Addr.Is6
+./netip.go:582:18: inlining call to Addr.v6u16
+./netip.go:582:18: inlining call to (*uint128).halves
+./netip.go:604:11: inlining call to Addr.Is4
+./netip.go:604:39: inlining call to IPv4Unspecified
+./netip.go:604:39: inlining call to AddrFrom4
+./netip.go:604:60: inlining call to AddrFrom4
+./netip.go:608:30: inlining call to IPv6Unspecified
+./netip.go:609:17: inlining call to Addr.IsLoopback
+./netip.go:609:17: inlining call to Addr.Is4
+./netip.go:609:17: inlining call to Addr.v4
+./netip.go:609:17: inlining call to Addr.Is6
+./netip.go:610:18: inlining call to Addr.IsMulticast
+./netip.go:610:18: inlining call to Addr.Is4
+./netip.go:610:18: inlining call to Addr.v4
+./netip.go:610:18: inlining call to Addr.Is6
+./netip.go:620:11: inlining call to Addr.Is4
+./netip.go:623:15: inlining call to Addr.v4
+./netip.go:624:10: inlining call to Addr.v4
+./netip.go:624:29: inlining call to Addr.v4
+./netip.go:625:10: inlining call to Addr.v4
+./netip.go:625:29: inlining call to Addr.v4
+./netip.go:628:11: inlining call to Addr.Is6
+./netip.go:631:15: inlining call to Addr.v6
+./netip.go:631:15: inlining call to (*uint128).halves
+./netip.go:641:6: can inline Addr.IsUnspecified
+./netip.go:642:30: inlining call to IPv4Unspecified
+./netip.go:642:30: inlining call to AddrFrom4
+./netip.go:642:57: inlining call to IPv6Unspecified
+./uint128.go:32:6: can inline uint128.and
+./uint128.go:20:6: can inline mask6
+./netip.go:1260:6: can inline PrefixFrom
+./netip.go:1261:33: inlining call to Addr.BitLen
+./netip.go:1266:23: inlining call to Addr.withoutZone
+./netip.go:1266:23: inlining call to Addr.Is6
+./netip.go:652:30: inlining call to errors.New
+./netip.go:660:31: inlining call to errors.New
+./netip.go:665:31: inlining call to errors.New
+./netip.go:668:29: inlining call to mask6
+./netip.go:668:23: inlining call to uint128.and
+./netip.go:669:19: inlining call to PrefixFrom
+./netip.go:669:19: inlining call to Addr.BitLen
+./netip.go:669:19: inlining call to Addr.withoutZone
+./netip.go:669:19: inlining call to Addr.Is6
+./netip.go:683:13: inlining call to bePutUint64
+./netip.go:684:13: inlining call to bePutUint64
+./netip.go:692:28: inlining call to Addr.Is4In6
+./netip.go:692:28: inlining call to Addr.Is6
+./netip.go:693:14: inlining call to bePutUint32
+./netip.go:709:14: inlining call to bePutUint32
+./netip.go:713:14: inlining call to bePutUint64
+./netip.go:714:14: inlining call to bePutUint64
+./uint128.go:58:6: can inline uint128.addOne
+./uint128.go:29:6: can inline uint128.isZero
+./netip.go:721:6: can inline Addr.Next
+./netip.go:722:26: inlining call to uint128.addOne
+./netip.go:723:11: inlining call to Addr.Is4
+./netip.go:729:20: inlining call to uint128.isZero
+./uint128.go:52:6: can inline uint128.subOne
+./netip.go:739:6: can inline Addr.Prev
+./netip.go:740:11: inlining call to Addr.Is4
+./netip.go:744:26: inlining call to uint128.isZero
+./netip.go:747:26: inlining call to uint128.subOne
+./netip.go:809:6: can inline appendDecimal
+./netip.go:852:32: inlining call to Addr.v4
+./netip.go:852:21: inlining call to appendDecimal
+./netip.go:854:32: inlining call to Addr.v4
+./netip.go:854:21: inlining call to appendDecimal
+./netip.go:856:32: inlining call to Addr.v4
+./netip.go:856:21: inlining call to appendDecimal
+./netip.go:858:32: inlining call to Addr.v4
+./netip.go:858:21: inlining call to appendDecimal
+./netip.go:844:6: can inline Addr.string4
+./netip.go:823:6: can inline appendHex
+./netip.go:885:24: inlining call to Addr.v6u16
+./netip.go:885:24: inlining call to (*uint128).halves
+./netip.go:904:32: inlining call to Addr.v6u16
+./netip.go:904:32: inlining call to (*uint128).halves
+./netip.go:904:18: inlining call to appendHex
+./netip.go:909:28: inlining call to Addr.Zone
+./netip.go:909:28: inlining call to intern.(*Value).Get
+./netip.go:867:6: can inline Addr.string6
+./netip.go:768:20: inlining call to Addr.string4
+./netip.go:770:15: inlining call to Addr.Is4In6
+./netip.go:770:15: inlining call to Addr.Is6
+./netip.go:771:19: inlining call to Addr.Zone
+./netip.go:771:19: inlining call to intern.(*Value).Get
+./netip.go:772:32: inlining call to Addr.Unmap
+./netip.go:772:32: inlining call to Addr.Is4In6
+./netip.go:772:32: inlining call to Addr.Is6
+./netip.go:772:42: inlining call to Addr.string4
+./netip.go:774:32: inlining call to Addr.Unmap
+./netip.go:774:32: inlining call to Addr.Is4In6
+./netip.go:774:32: inlining call to Addr.Is6
+./netip.go:774:42: inlining call to Addr.string4
+./netip.go:777:20: inlining call to Addr.string6
+./netip.go:791:15: inlining call to Addr.Is4In6
+./netip.go:791:15: inlining call to Addr.Is6
+./netip.go:793:16: inlining call to Addr.Unmap
+./netip.go:793:16: inlining call to Addr.Is4In6
+./netip.go:793:16: inlining call to Addr.Is6
+./netip.go:794:19: inlining call to Addr.Zone
+./netip.go:794:19: inlining call to intern.(*Value).Get
+./netip.go:840:6: can inline appendHexPad
+./netip.go:930:35: inlining call to Addr.v6u16
+./netip.go:930:35: inlining call to (*uint128).halves
+./netip.go:930:21: inlining call to appendHexPad
+./netip.go:937:28: inlining call to Addr.Zone
+./netip.go:937:28: inlining call to intern.(*Value).Get
+./netip.go:956:15: inlining call to Addr.Is4In6
+./netip.go:956:15: inlining call to Addr.Is6
+./netip.go:958:16: inlining call to Addr.Unmap
+./netip.go:958:16: inlining call to Addr.Is4In6
+./netip.go:958:16: inlining call to Addr.Is6
+./netip.go:959:19: inlining call to Addr.Zone
+./netip.go:959:19: inlining call to intern.(*Value).Get
+./netip.go:992:14: inlining call to bePutUint32
+./netip.go:994:15: inlining call to Addr.Zone
+./netip.go:994:15: inlining call to intern.(*Value).Get
+./netip.go:996:14: inlining call to bePutUint64
+./netip.go:997:14: inlining call to bePutUint64
+./netip.go:1007:6: can inline Addr.MarshalBinary
+./netip.go:1020:18: inlining call to AddrFrom4
+./netip.go:1029:19: inlining call to errors.New
+./netip.go:1040:6: can inline AddrPortFrom
+./netip.go:1043:6: can inline AddrPort.Addr
+./netip.go:1046:6: can inline AddrPort.Port
+./netip.go:1054:27: inlining call to stringsLastIndexByte
+./netip.go:1056:35: inlining call to errors.New
+./netip.go:1061:35: inlining call to errors.New
+./netip.go:1064:35: inlining call to errors.New
+./netip.go:1068:36: inlining call to errors.New
+./netip.go:1089:57: inlining call to strconv.Quote
+./netip.go:1089:57: inlining call to strconv.quoteWith
+./netip.go:1089:93: inlining call to strconv.Quote
+./netip.go:1089:93: inlining call to strconv.quoteWith
+./netip.go:1089:25: inlining call to errors.New
+./netip.go:1096:21: inlining call to Addr.Is4
+./netip.go:1097:67: inlining call to strconv.Quote
+./netip.go:1097:67: inlining call to strconv.quoteWith
+./netip.go:1097:32: inlining call to errors.New
+./netip.go:1098:29: inlining call to Addr.Is6
+./netip.go:1099:67: inlining call to strconv.Quote
+./netip.go:1099:67: inlining call to strconv.quoteWith
+./netip.go:1099:32: inlining call to errors.New
+./netip.go:1106:6: can inline MustParseAddrPort
+./netip.go:1115:6: can inline AddrPort.isZero
+./netip.go:1119:6: can inline AddrPort.IsValid
+./netip.go:1119:55: inlining call to Addr.IsValid
+./netip.go:1140:6: can inline joinHostPort
+./netip.go:1136:22: inlining call to joinHostPort
+./netip.go:1159:17: inlining call to Addr.Is4In6
+./netip.go:1159:17: inlining call to Addr.Is6
+./netip.go:1161:18: inlining call to Addr.Unmap
+./netip.go:1161:18: inlining call to Addr.Is4In6
+./netip.go:1161:18: inlining call to Addr.Is6
+./netip.go:1162:21: inlining call to Addr.Zone
+./netip.go:1162:21: inlining call to intern.(*Value).Get
+./netip.go:1211:13: inlining call to AddrPort.Addr
+./netip.go:1212:34: inlining call to AddrPort.Port
+./netip.go:1212:13: inlining call to lePutUint16
+./netip.go:1220:20: inlining call to errors.New
+./netip.go:1227:34: inlining call to leUint16
+./netip.go:1227:19: inlining call to AddrPortFrom
+./netip.go:1272:6: can inline Prefix.Addr
+./netip.go:1277:6: can inline Prefix.Bits
+./netip.go:1282:6: can inline Prefix.IsValid
+./netip.go:1282:53: inlining call to Addr.isZero
+./netip.go:1282:100: inlining call to Addr.BitLen
+./netip.go:1284:6: can inline Prefix.isZero
+./netip.go:1287:6: can inline Prefix.IsSingleIP
+./netip.go:1287:85: inlining call to Addr.BitLen
+./netip.go:1297:27: inlining call to stringsLastIndexByte
+./netip.go:1299:67: inlining call to strconv.Quote
+./netip.go:1299:67: inlining call to strconv.quoteWith
+./netip.go:1299:30: inlining call to errors.New
+./netip.go:1303:67: inlining call to strconv.Quote
+./netip.go:1303:67: inlining call to strconv.quoteWith
+./netip.go:1303:30: inlining call to errors.New
+./netip.go:1306:11: inlining call to Addr.Is6
+./netip.go:1307:67: inlining call to strconv.Quote
+./netip.go:1307:67: inlining call to strconv.quoteWith
+./netip.go:1307:30: inlining call to errors.New
+./netip.go:1313:67: inlining call to strconv.Quote
+./netip.go:1313:67: inlining call to strconv.quoteWith
+./netip.go:1313:116: inlining call to strconv.Quote
+./netip.go:1313:116: inlining call to strconv.quoteWith
+./netip.go:1313:30: inlining call to errors.New
+./netip.go:1316:11: inlining call to Addr.Is6
+./netip.go:1320:67: inlining call to strconv.Quote
+./netip.go:1320:67: inlining call to strconv.quoteWith
+./netip.go:1320:30: inlining call to errors.New
+./netip.go:1322:19: inlining call to PrefixFrom
+./netip.go:1322:19: inlining call to Addr.BitLen
+./netip.go:1322:19: inlining call to Addr.withoutZone
+./netip.go:1322:19: inlining call to Addr.Is6
+./netip.go:1327:6: can inline MustParsePrefix
+./netip.go:1339:6: can inline Prefix.Masked
+./uint128.go:37:6: can inline uint128.xor
+./netip.go:1354:15: inlining call to Prefix.IsValid
+./netip.go:1354:15: inlining call to Addr.isZero
+./netip.go:1354:15: inlining call to Addr.BitLen
+./netip.go:1354:31: inlining call to Addr.hasZone
+./netip.go:1357:26: inlining call to Addr.BitLen
+./netip.go:1357:39: inlining call to Addr.BitLen
+./netip.go:1360:11: inlining call to Addr.Is4
+./netip.go:1374:21: inlining call to uint128.xor
+./netip.go:1374:42: inlining call to mask6
+./netip.go:1374:36: inlining call to uint128.and
+./netip.go:1374:63: inlining call to uint128.isZero
+./netip.go:1384:15: inlining call to Prefix.IsValid
+./netip.go:1384:15: inlining call to Addr.isZero
+./netip.go:1384:15: inlining call to Addr.BitLen
+./netip.go:1384:31: inlining call to Prefix.IsValid
+./netip.go:1384:31: inlining call to Addr.isZero
+./netip.go:1384:31: inlining call to Addr.BitLen
+./netip.go:1390:13: inlining call to Addr.Is4
+./netip.go:1390:27: inlining call to Addr.Is4
+./netip.go:1420:13: inlining call to Prefix.isZero
+./netip.go:1423:15: inlining call to Prefix.IsValid
+./netip.go:1423:15: inlining call to Addr.isZero
+./netip.go:1423:15: inlining call to Addr.BitLen
+./netip.go:1431:17: inlining call to Addr.Is4In6
+./netip.go:1431:17: inlining call to Addr.Is6
+./netip.go:1433:18: inlining call to Addr.Unmap
+./netip.go:1433:18: inlining call to Addr.Is4In6
+./netip.go:1433:18: inlining call to Addr.Is6
+./netip.go:1440:19: inlining call to appendDecimal
+./netip.go:1478:13: inlining call to Prefix.Addr
+./netip.go:1478:27: inlining call to Addr.withoutZone
+./netip.go:1478:27: inlining call to Addr.Is6
+./netip.go:1479:28: inlining call to Prefix.Bits
+./netip.go:1487:20: inlining call to errors.New
+./netip.go:1494:17: inlining call to PrefixFrom
+./netip.go:1494:17: inlining call to Addr.BitLen
+./netip.go:1494:17: inlining call to Addr.withoutZone
+./netip.go:1494:17: inlining call to Addr.Is6
+./netip.go:1500:15: inlining call to Prefix.IsValid
+./netip.go:1500:15: inlining call to Addr.isZero
+./netip.go:1500:15: inlining call to Addr.BitLen
+./uint128.go:42:6: can inline uint128.or
+./uint128.go:47:6: can inline uint128.not
+./uint128.go:63:6: can inline u64CommonPrefixLen
+./uint128.go:64:34: inlining call to bits.LeadingZeros64
+./uint128.go:67:6: can inline uint128.commonPrefixLen
+./uint128.go:68:27: inlining call to u64CommonPrefixLen
+./uint128.go:68:27: inlining call to bits.LeadingZeros64
+./uint128.go:69:26: inlining call to u64CommonPrefixLen
+./uint128.go:69:26: inlining call to bits.LeadingZeros64
+./uint128.go:84:6: can inline uint128.bitsSetFrom
+./uint128.go:85:19: inlining call to mask6
+./uint128.go:85:33: inlining call to uint128.not
+./uint128.go:85:13: inlining call to uint128.or
+./uint128.go:90:6: can inline uint128.bitsClearedFrom
+./uint128.go:91:20: inlining call to mask6
+./uint128.go:91:14: inlining call to uint128.and
+./leaf_alts.go:10:27: s does not escape
+./leaf_alts.go:19:15: b does not escape
+./leaf_alts.go:25:18: b does not escape
+./leaf_alts.go:37:18: b does not escape
+./leaf_alts.go:45:15: b does not escape
+./leaf_alts.go:50:18: b does not escape
+./netip.go:107:16: addr does not escape
+./netip.go:161:16: leaking param: s
+./netip.go:168:34: parseAddrError{...} escapes to heap
+./netip.go:173:34: parseAddrError{...} escapes to heap
+./netip.go:180:34: parseAddrError{...} escapes to heap
+./netip.go:184:34: parseAddrError{...} escapes to heap
+./netip.go:191:33: parseAddrError{...} escapes to heap
+./netip.go:195:32: parseAddrError{...} escapes to heap
+./netip.go:489:7: leaking param: ip to result ~r0 level=0
+./netip.go:489:25: leaking param: zone
+./netip.go:330:12: parseIPv6 ignoring self-assignment in ip[j + n] = ip[j]
+./netip.go:202:16: leaking param: in
+./netip.go:215:33: parseAddrError{...} escapes to heap
+./netip.go:252:34: parseAddrError{...} escapes to heap
+./netip.go:257:33: parseAddrError{...} escapes to heap
+./netip.go:264:34: parseAddrError{...} escapes to heap
+./netip.go:268:34: parseAddrError{...} escapes to heap
+./netip.go:275:34: parseAddrError{...} escapes to heap
+./netip.go:299:33: parseAddrError{...} escapes to heap
+./netip.go:301:33: parseAddrError{...} escapes to heap
+./netip.go:308:34: parseAddrError{...} escapes to heap
+./netip.go:320:32: parseAddrError{...} escapes to heap
+./netip.go:326:33: parseAddrError{...} escapes to heap
+./netip.go:337:32: parseAddrError{...} escapes to heap
+./netip.go:120:16: leaking param: s
+./netip.go:130:33: parseAddrError{...} escapes to heap
+./netip.go:133:31: parseAddrError{...} escapes to heap
+./netip.go:138:20: leaking param: s
+./netip.go:152:7: err does not escape
+./netip.go:155:75: "ParseAddr(" + ~R0 + "): " + err.msg + " (at " + ~R0 + ")" escapes to heap
+./netip.go:155:26: string(strconv.appendQuotedWith(make([]byte, int(0), int(3) * len(strconv.s) / int(2)), strconv.s, strconv.quote, strconv.ASCIIonly, strconv.graphicOnly)) does not escape
+./netip.go:155:26: make([]byte, int(0), int(3) * len(strconv.s) / int(2)) escapes to heap
+./netip.go:155:66: string(strconv.appendQuotedWith(make([]byte, int(0), int(3) * len(strconv.s) / int(2)), strconv.s, strconv.quote, strconv.ASCIIonly, strconv.graphicOnly)) does not escape
+./netip.go:155:66: make([]byte, int(0), int(3) * len(strconv.s) / int(2)) escapes to heap
+./netip.go:157:42: "ParseAddr(" + ~R0 + "): " + err.msg escapes to heap
+./netip.go:157:25: string(strconv.appendQuotedWith(make([]byte, int(0), int(3) * len(strconv.s) / int(2)), strconv.s, strconv.quote, strconv.ASCIIonly, strconv.graphicOnly)) does not escape
+./netip.go:157:25: make([]byte, int(0), int(3) * len(strconv.s) / int(2)) escapes to heap
+./netip.go:345:20: slice does not escape
+./netip.go:357:7: ip does not escape
+./netip.go:363:7: ip does not escape
+./netip.go:369:7: ip does not escape
+./netip.go:378:7: ip does not escape
+./netip.go:387:7: ip does not escape
+./netip.go:394:7: ip does not escape
+./netip.go:405:7: leaking param: ip to result ~r0 level=2
+./netip.go:416:7: ip does not escape
+./netip.go:416:24: ip2 does not escape
+./netip.go:453:7: ip does not escape
+./netip.go:453:21: ip2 does not escape
+./netip.go:455:7: ip does not escape
+./netip.go:455:25: ip2 does not escape
+./netip.go:460:7: ip does not escape
+./netip.go:465:7: ip does not escape
+./netip.go:471:7: ip does not escape
+./netip.go:479:7: leaking param: ip to result ~r0 level=0
+./netip.go:503:7: leaking param: ip to result ~r0 level=0
+./netip.go:512:7: ip does not escape
+./netip.go:517:7: ip does not escape
+./netip.go:532:7: ip does not escape
+./netip.go:547:7: ip does not escape
+./netip.go:563:7: ip does not escape
+./netip.go:573:7: ip does not escape
+./netip.go:596:7: ip does not escape
+./netip.go:618:7: ip does not escape
+./netip.go:641:7: ip does not escape
+./netip.go:650:7: leaking param: ip to result ~r0 level=0
+./netip.go:652:30: &errors.errorString{...} escapes to heap
+./netip.go:660:64: "prefix length " + itoa.Itoa(b) + " too large for IPv4" escapes to heap
+./netip.go:660:31: &errors.errorString{...} escapes to heap
+./netip.go:665:64: "prefix length " + itoa.Itoa(b) + " too large for IPv6" escapes to heap
+./netip.go:665:31: &errors.errorString{...} escapes to heap
+./netip.go:682:7: ip does not escape
+./netip.go:691:7: ip does not escape
+./netip.go:697:8: "As4 called on IP zero value" escapes to heap
+./netip.go:699:7: "As4 called on IPv6 address" escapes to heap
+./netip.go:703:7: ip does not escape
+./netip.go:708:7: moved to heap: ret
+./netip.go:712:7: moved to heap: ret
+./netip.go:721:7: leaking param: ip to result ~r0 level=0
+./netip.go:739:7: leaking param: ip to result ~r0 level=0
+./netip.go:851:7: ip does not escape
+./netip.go:851:26: leaking param: ret to result ~r0 level=0
+./netip.go:881:7: ip does not escape
+./netip.go:881:26: leaking param: ret to result ~r0 level=0
+./netip.go:763:7: ip does not escape
+./netip.go:768:20: make([]byte, 0, max) does not escape
+./netip.go:768:20: string(ret) escapes to heap
+./netip.go:772:51: "::ffff:" + ~R0 + "%" + z escapes to heap
+./netip.go:772:42: make([]byte, 0, max) does not escape
+./netip.go:772:42: string(ret) does not escape
+./netip.go:774:22: "::ffff:" + ~R0 escapes to heap
+./netip.go:774:42: make([]byte, 0, max) does not escape
+./netip.go:774:42: string(ret) does not escape
+./netip.go:777:20: make([]byte, 0, max) does not escape
+./netip.go:777:20: string(ret) escapes to heap
+./netip.go:784:7: ip does not escape
+./netip.go:784:25: leaking param: b to result ~r0 level=0
+./netip.go:809:20: leaking param: b to result ~r0 level=0
+./netip.go:823:16: leaking param: b to result ~r0 level=0
+./netip.go:840:19: leaking param: b to result ~r0 level=0
+./netip.go:844:7: ip does not escape
+./netip.go:846:13: make([]byte, 0, max) does not escape
+./netip.go:848:15: string(ret) escapes to heap
+./netip.go:867:7: ip does not escape
+./netip.go:876:13: make([]byte, 0, max) does not escape
+./netip.go:878:15: string(ret) escapes to heap
+./netip.go:917:7: ip does not escape
+./netip.go:924:13: make([]byte, 0, size) does not escape
+./netip.go:939:15: string(ret) escapes to heap
+./netip.go:945:7: ip does not escape
+./netip.go:948:16: ([]byte)("") escapes to heap
+./netip.go:951:12: make([]byte, 0, max) escapes to heap
+./netip.go:955:12: make([]byte, 0, max) escapes to heap
+./netip.go:975:7: ip does not escape
+./netip.go:975:31: text does not escape
+./netip.go:981:29: string(text) escapes to heap
+./netip.go:985:7: ip does not escape
+./netip.go:989:11: make([]byte, trailingBytes) escapes to heap
+./netip.go:991:11: make([]byte, 4 + trailingBytes) escapes to heap
+./netip.go:995:11: make([]byte, 16 + len(z) + trailingBytes) escapes to heap
+./netip.go:1007:7: ip does not escape
+./netip.go:1013:7: ip does not escape
+./netip.go:1013:33: b does not escape
+./netip.go:1026:42: string(b[16:]) escapes to heap
+./netip.go:1029:19: &errors.errorString{...} escapes to heap
+./netip.go:1040:19: leaking param: ip to result ~r0 level=0
+./netip.go:1043:7: leaking param: p to result ~r0 level=0
+./netip.go:1046:7: p does not escape
+./netip.go:1053:20: leaking param: s to result ip level=0
+./netip.go:1053:20: leaking param: s to result port level=0
+./netip.go:1056:35: &errors.errorString{...} escapes to heap
+./netip.go:1061:35: &errors.errorString{...} escapes to heap
+./netip.go:1064:35: &errors.errorString{...} escapes to heap
+./netip.go:1068:36: &errors.errorString{...} escapes to heap
+./netip.go:1081:20: leaking param: s
+./netip.go:1089:78: "invalid port " + ~R0 + " parsing " + ~R0 escapes to heap
+./netip.go:1089:57: string(strconv.appendQuotedWith(make([]byte, int(0), int(3) * len(strconv.s) / int(2)), strconv.s, strconv.quote, strconv.ASCIIonly, strconv.graphicOnly)) does not escape
+./netip.go:1089:57: make([]byte, int(0), int(3) * len(strconv.s) / int(2)) escapes to heap
+./netip.go:1089:93: string(strconv.appendQuotedWith(make([]byte, int(0), int(3) * len(strconv.s) / int(2)), strconv.s, strconv.quote, strconv.ASCIIonly, strconv.graphicOnly)) does not escape
+./netip.go:1089:93: make([]byte, int(0), int(3) * len(strconv.s) / int(2)) escapes to heap
+./netip.go:1089:25: &errors.errorString{...} escapes to heap
+./netip.go:1097:71: "invalid ip:port " + ~R0 + ", square brackets can only be used with IPv6 addresses" escapes to heap
+./netip.go:1097:67: string(strconv.appendQuotedWith(make([]byte, int(0), int(3) * len(strconv.s) / int(2)), strconv.s, strconv.quote, strconv.ASCIIonly, strconv.graphicOnly)) does not escape
+./netip.go:1097:67: make([]byte, int(0), int(3) * len(strconv.s) / int(2)) escapes to heap
+./netip.go:1097:32: &errors.errorString{...} escapes to heap
+./netip.go:1099:71: "invalid ip:port " + ~R0 + ", IPv6 addresses must be surrounded by square brackets" escapes to heap
+./netip.go:1099:67: string(strconv.appendQuotedWith(make([]byte, int(0), int(3) * len(strconv.s) / int(2)), strconv.s, strconv.quote, strconv.ASCIIonly, strconv.graphicOnly)) does not escape
+./netip.go:1099:67: make([]byte, int(0), int(3) * len(strconv.s) / int(2)) escapes to heap
+./netip.go:1099:32: &errors.errorString{...} escapes to heap
+./netip.go:1106:24: leaking param: s
+./netip.go:1115:7: p does not escape
+./netip.go:1119:7: p does not escape
+./netip.go:1121:7: p does not escape
+./netip.go:1127:14: make([]byte, 0, 21) does not escape
+./netip.go:1133:16: string(buf) escapes to heap
+./netip.go:1136:22: "[" + host + "]:" + port escapes to heap
+./netip.go:1136:22: host + ":" + port escapes to heap
+./netip.go:1140:19: host does not escape
+./netip.go:1140:25: port does not escape
+./netip.go:1144:28: "[" + host + "]:" + port escapes to heap
+./netip.go:1146:20: host + ":" + port escapes to heap
+./netip.go:1152:7: p does not escape
+./netip.go:1152:28: leaking param: b to result ~r0 level=0
+./netip.go:1180:7: p does not escape
+./netip.go:1189:11: make([]byte, 0, max) escapes to heap
+./netip.go:1197:7: p does not escape
+./netip.go:1197:34: text does not escape
+./netip.go:1203:32: string(text) escapes to heap
+./netip.go:1210:7: p does not escape
+./netip.go:1218:7: p does not escape
+./netip.go:1218:36: b does not escape
+./netip.go:1220:20: &errors.errorString{...} escapes to heap
+./netip.go:1260:17: leaking param: ip to result ~r0 level=0
+./netip.go:1272:7: leaking param: p to result ~r0 level=0
+./netip.go:1277:7: p does not escape
+./netip.go:1282:7: p does not escape
+./netip.go:1284:7: p does not escape
+./netip.go:1287:7: p does not escape
+./netip.go:1296:18: leaking param: s
+./netip.go:1299:71: "netip.ParsePrefix(" + ~R0 + "): no '/'" escapes to heap
+./netip.go:1299:67: string(strconv.appendQuotedWith(make([]byte, int(0), int(3) * len(strconv.s) / int(2)), strconv.s, strconv.quote, strconv.ASCIIonly, strconv.graphicOnly)) does not escape
+./netip.go:1299:67: make([]byte, int(0), int(3) * len(strconv.s) / int(2)) escapes to heap
+./netip.go:1299:30: &errors.errorString{...} escapes to heap
+./netip.go:1303:79: "netip.ParsePrefix(" + ~R0 + "): " + err.Error() escapes to heap
+./netip.go:1303:67: string(strconv.appendQuotedWith(make([]byte, int(0), int(3) * len(strconv.s) / int(2)), strconv.s, strconv.quote, strconv.ASCIIonly, strconv.graphicOnly)) does not escape
+./netip.go:1303:67: make([]byte, int(0), int(3) * len(strconv.s) / int(2)) escapes to heap
+./netip.go:1303:30: &errors.errorString{...} escapes to heap
+./netip.go:1307:71: "netip.ParsePrefix(" + ~R0 + "): IPv6 zones cannot be present in a prefix" escapes to heap
+./netip.go:1307:67: string(strconv.appendQuotedWith(make([]byte, int(0), int(3) * len(strconv.s) / int(2)), strconv.s, strconv.quote, strconv.ASCIIonly, strconv.graphicOnly)) does not escape
+./netip.go:1307:67: make([]byte, int(0), int(3) * len(strconv.s) / int(2)) escapes to heap
+./netip.go:1307:30: &errors.errorString{...} escapes to heap
+./netip.go:1313:101: "netip.ParsePrefix(" + ~R0 + "): bad bits after slash: " + ~R0 escapes to heap
+./netip.go:1313:67: string(strconv.appendQuotedWith(make([]byte, int(0), int(3) * len(strconv.s) / int(2)), strconv.s, strconv.quote, strconv.ASCIIonly, strconv.graphicOnly)) does not escape
+./netip.go:1313:67: make([]byte, int(0), int(3) * len(strconv.s) / int(2)) escapes to heap
+./netip.go:1313:116: string(strconv.appendQuotedWith(make([]byte, int(0), int(3) * len(strconv.s) / int(2)), strconv.s, strconv.quote, strconv.ASCIIonly, strconv.graphicOnly)) does not escape
+./netip.go:1313:116: make([]byte, int(0), int(3) * len(strconv.s) / int(2)) escapes to heap
+./netip.go:1313:30: &errors.errorString{...} escapes to heap
+./netip.go:1320:71: "netip.ParsePrefix(" + ~R0 + "): prefix length out of range" escapes to heap
+./netip.go:1320:67: string(strconv.appendQuotedWith(make([]byte, int(0), int(3) * len(strconv.s) / int(2)), strconv.s, strconv.quote, strconv.ASCIIonly, strconv.graphicOnly)) does not escape
+./netip.go:1320:67: make([]byte, int(0), int(3) * len(strconv.s) / int(2)) escapes to heap
+./netip.go:1320:30: &errors.errorString{...} escapes to heap
+./netip.go:1327:22: leaking param: s
+./netip.go:1339:7: leaking param: p to result ~r0 level=0
+./netip.go:1353:7: p does not escape
+./netip.go:1353:26: ip does not escape
+./netip.go:1383:7: p does not escape
+./netip.go:1383:26: o does not escape
+./netip.go:1419:7: p does not escape
+./netip.go:1419:26: leaking param: b to result ~r0 level=0
+./netip.go:1447:7: p does not escape
+./netip.go:1456:11: make([]byte, 0, max) escapes to heap
+./netip.go:1464:7: p does not escape
+./netip.go:1464:32: text does not escape
+./netip.go:1470:30: string(text) escapes to heap
+./netip.go:1477:7: p does not escape
+./netip.go:1485:7: p does not escape
+./netip.go:1485:34: b does not escape
+./netip.go:1487:20: &errors.errorString{...} escapes to heap
+./netip.go:1499:7: p does not escape
+./netip.go:1503:29: Addr.String(p.ip) + "/" + itoa.Itoa(int(p.bits)) escapes to heap
+./uint128.go:78:7: leaking param: u to result ~r0 level=0
+./netip.go:70:13: new(intern.Value) escapes to heap
+./netip.go:71:13: new(intern.Value) escapes to heap
+./netip.go:364:33: index bounds check elided
+./netip.go:370:34: index bounds check elided
+./netip.go:526:18: index bounds check elided
+./netip.go:567:18: index bounds check elided
+./netip.go:582:18: index bounds check elided
+./netip.go:631:15: index bounds check elided
+./netip.go:885:24: index bounds check elided
+./netip.go:904:32: index bounds check elided
+./netip.go:930:35: index bounds check elided
+<autogenerated>:1: inlining call to uint128.addOne
+<autogenerated>:1: inlining call to uint128.and
+<autogenerated>:1: inlining call to uint128.bitsClearedFrom
+<autogenerated>:1: inlining call to mask6
+<autogenerated>:1: inlining call to uint128.and
+<autogenerated>:1: inlining call to uint128.bitsSetFrom
+<autogenerated>:1: inlining call to mask6
+<autogenerated>:1: inlining call to uint128.not
+<autogenerated>:1: inlining call to uint128.or
+<autogenerated>:1: inlining call to uint128.commonPrefixLen
+<autogenerated>:1: inlining call to u64CommonPrefixLen
+<autogenerated>:1: inlining call to bits.LeadingZeros64
+<autogenerated>:1: inlining call to u64CommonPrefixLen
+<autogenerated>:1: inlining call to bits.LeadingZeros64
+<autogenerated>:1: inlining call to uint128.isZero
+<autogenerated>:1: inlining call to uint128.not
+<autogenerated>:1: inlining call to uint128.or
+<autogenerated>:1: inlining call to uint128.subOne
+<autogenerated>:1: inlining call to uint128.xor
+<autogenerated>:1: inlining call to Addr.BitLen
+<autogenerated>:1: inlining call to Addr.Is4
+<autogenerated>:1: inlining call to Addr.Is4In6
+<autogenerated>:1: inlining call to Addr.Is6
+<autogenerated>:1: inlining call to Addr.Is6
+<autogenerated>:1: inlining call to Addr.IsInterfaceLocalMulticast
+<autogenerated>:1: inlining call to Addr.Is6
+<autogenerated>:1: inlining call to Addr.v6u16
+<autogenerated>:1: inlining call to (*uint128).halves
+<autogenerated>:1: inlining call to Addr.IsLoopback
+<autogenerated>:1: inlining call to Addr.Is4
+<autogenerated>:1: inlining call to Addr.v4
+<autogenerated>:1: inlining call to Addr.Is6
+<autogenerated>:1: inlining call to Addr.IsMulticast
+<autogenerated>:1: inlining call to Addr.Is4
+<autogenerated>:1: inlining call to Addr.v4
+<autogenerated>:1: inlining call to Addr.Is6
+<autogenerated>:1: inlining call to Addr.IsUnspecified
+<autogenerated>:1: inlining call to IPv4Unspecified
+<autogenerated>:1: inlining call to AddrFrom4
+<autogenerated>:1: inlining call to IPv6Unspecified
+<autogenerated>:1: inlining call to Addr.IsValid
+<autogenerated>:1: inlining call to Addr.Less
+<autogenerated>:1: inlining call to Addr.MarshalBinary
+<autogenerated>:1: inlining call to Addr.Next
+<autogenerated>:1: inlining call to uint128.addOne
+<autogenerated>:1: inlining call to Addr.Is4
+<autogenerated>:1: inlining call to uint128.isZero
+<autogenerated>:1: inlining call to Addr.Prev
+<autogenerated>:1: inlining call to Addr.Is4
+<autogenerated>:1: inlining call to uint128.isZero
+<autogenerated>:1: inlining call to uint128.subOne
+<autogenerated>:1: inlining call to Addr.Unmap
+<autogenerated>:1: inlining call to Addr.Is4In6
+<autogenerated>:1: inlining call to Addr.Is6
+<autogenerated>:1: inlining call to Addr.Zone
+<autogenerated>:1: inlining call to intern.(*Value).Get
+<autogenerated>:1: inlining call to Addr.hasZone
+<autogenerated>:1: inlining call to Addr.isZero
+<autogenerated>:1: inlining call to Addr.lessOrEq
+<autogenerated>:1: inlining call to Addr.string4
+<autogenerated>:1: make([]byte, 0, max) does not escape
+<autogenerated>:1: string(ret) escapes to heap
+<autogenerated>:1: inlining call to Addr.string6
+<autogenerated>:1: make([]byte, 0, max) does not escape
+<autogenerated>:1: string(ret) escapes to heap
+<autogenerated>:1: inlining call to Addr.v4
+<autogenerated>:1: inlining call to Addr.v6
+<autogenerated>:1: inlining call to (*uint128).halves
+<autogenerated>:1: inlining call to Addr.v6u16
+<autogenerated>:1: inlining call to (*uint128).halves
+<autogenerated>:1: inlining call to Addr.withoutZone
+<autogenerated>:1: inlining call to Addr.Is6
+<autogenerated>:1: inlining call to Prefix.Addr
+<autogenerated>:1: inlining call to Prefix.Bits
+<autogenerated>:1: inlining call to Prefix.IsSingleIP
+<autogenerated>:1: inlining call to Addr.BitLen
+<autogenerated>:1: inlining call to Prefix.IsValid
+<autogenerated>:1: inlining call to Addr.isZero
+<autogenerated>:1: inlining call to Addr.BitLen
+<autogenerated>:1: inlining call to Prefix.Masked
+<autogenerated>:1: inlining call to Prefix.isZero
+<autogenerated>:1: inlining call to AddrPort.Addr
+<autogenerated>:1: inlining call to AddrPort.IsValid
+<autogenerated>:1: inlining call to Addr.IsValid
+<autogenerated>:1: inlining call to AddrPort.Port
+<autogenerated>:1: inlining call to AddrPort.isZero
+<autogenerated>:1: index bounds check elided
+<autogenerated>:1: index bounds check elided
+<autogenerated>:1: index bounds check elided

@@ -1,0 +1,49 @@
+# test log
+open DOES NOT EXIST
+open testdata/file1.tmpl
+open testdata/file2.tmpl
+stat DOES NOT EXIST
+stat testdata
+open testdata
+open testdata/file1.tmpl
+open testdata/file2.tmpl
+stat testdata/DOES NOT EXIST
+stat testdata/file1.tmpl
+stat testdata/file2.tmpl
+open testdata/file1.tmpl
+open testdata/file2.tmpl
+open testdata/.
+open testdata/file1.tmpl
+open testdata/file2.tmpl
+open testdata/tmpl1.tmpl
+open testdata/tmpl2.tmpl
+stat testdata
+open testdata
+open testdata/tmpl1.tmpl
+open testdata/tmpl2.tmpl
+getenv TMPDIR
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template257084429/T0.tmpl
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template257084429/T1.tmpl
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template257084429/T2.tmpl
+stat /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template257084429
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template257084429
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template257084429/T0.tmpl
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template257084429/T1.tmpl
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template257084429/T2.tmpl
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T
+getenv TMPDIR
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template4260659575/T1.tmpl
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template4260659575/T2.tmpl
+stat /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template4260659575
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template4260659575
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template4260659575/T1.tmpl
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template4260659575/T2.tmpl
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T
+getenv TMPDIR
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template2787858515/T0.tmpl
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template2787858515/T1.tmpl
+stat /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template2787858515
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template2787858515
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template2787858515/T0.tmpl
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/template2787858515/T1.tmpl
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T

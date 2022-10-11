@@ -1,0 +1,4 @@
+./dot_test.go
+./example_test.go
+./exec_posix_test.go
+./exec_test.go

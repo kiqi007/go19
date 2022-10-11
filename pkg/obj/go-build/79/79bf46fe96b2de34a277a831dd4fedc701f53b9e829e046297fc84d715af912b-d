@@ -1,0 +1,22 @@
+# test log
+getenv TMPDIR
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestSymlink2377308366/001/hello
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestSymlink2377308366/001/.
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestSymlink2377308366/001/hello.link
+stat /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestSymlink2377308366/001/./hello.link
+stat /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestSymlink2377308366/001/hello.link
+stat /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestSymlink2377308366/001/hello.link
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestSymlink2377308366/001/hello.link
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestSymlink2377308366/001/hello.link
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestSymlink2377308366/001/hello.link
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestSymlink2377308366/001/hello
+stat /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestSymlink2377308366/001/./hello
+stat /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestSymlink2377308366/001/hello
+stat /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestSymlink2377308366/001/hello
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestSymlink2377308366/001/hello
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestSymlink2377308366/001/hello
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestSymlink2377308366/001/hello
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestSymlink2377308366/001/.
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestSymlink2377308366/001/.
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestSymlink2377308366/001/.
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T

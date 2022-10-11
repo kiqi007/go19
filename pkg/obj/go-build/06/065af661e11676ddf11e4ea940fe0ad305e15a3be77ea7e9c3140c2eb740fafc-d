@@ -1,0 +1,11 @@
+# test log
+stat /dev/zero
+getenv ZONEINFO
+getenv ZONEINFO
+open testdata/2020b_Europe_Berlin
+open testdata/2021a_America_Nuuk
+open testdata/2021a_Asia_Gaza
+open testdata/2021a_Europe_Dublin
+getenv TZ
+stat /etc/localtime
+stat /usr/share/zoneinfo/Asia/Shanghai

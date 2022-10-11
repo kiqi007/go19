@@ -1,0 +1,9 @@
+# test log
+open testdata/issue6550.gz.base64
+getenv GO_BUILDER_NAME
+open testdata
+open testdata/issue6550.gz.base64
+open testdata/fuzz/FuzzReader
+getenv GODEBUG
+getenv GODEBUG
+getenv GODEBUG

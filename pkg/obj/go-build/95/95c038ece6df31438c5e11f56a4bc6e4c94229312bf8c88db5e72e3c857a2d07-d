@@ -1,0 +1,5 @@
+# test log
+getenv GODEBUG
+open testdata/fuzz/FuzzFloat64RoundTrip
+open testdata/fuzz/FuzzRuneRoundTrip
+open testdata/fuzz/FuzzStringRoundTrip

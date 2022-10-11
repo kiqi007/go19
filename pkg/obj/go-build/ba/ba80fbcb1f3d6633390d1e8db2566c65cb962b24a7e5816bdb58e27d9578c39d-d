@@ -1,0 +1,11 @@
+# test log
+getenv TMPDIR
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/heapdumptest471095623
+getenv TMPDIR
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/heapdumptest3889361416
+getenv TMPDIR
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/heapdumptest3612383494
+getenv GOROOT
+open /dev/null
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/go-build3922993164/b1384/debug.test
+open testdata/fuzz/FuzzParseBuildInfoRoundTrip

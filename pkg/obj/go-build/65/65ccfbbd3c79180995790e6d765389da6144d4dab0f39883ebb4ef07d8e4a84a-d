@@ -1,0 +1,6 @@
+./abi_test.go
+./all_test.go
+./example_test.go
+./set_test.go
+./tostring_test.go
+./visiblefields_test.go

@@ -1,0 +1,3 @@
+package mycgo
+//go:cgo_import_dynamic puts puts ""
+//go:cgo_import_dynamic _ _ "/usr/lib/libSystem.B.dylib"

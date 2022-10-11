@@ -1,0 +1,4 @@
+./example_test.go
+./race_test.go
+./rand_test.go
+./regress_test.go

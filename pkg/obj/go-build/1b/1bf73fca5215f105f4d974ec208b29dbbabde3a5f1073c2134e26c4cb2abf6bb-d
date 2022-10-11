@@ -1,0 +1,8 @@
+package lib
+//go:cgo_import_dynamic NSAppearanceNameDarkAqua NSAppearanceNameDarkAqua ""
+//go:cgo_import_dynamic OBJC_CLASS_$_NSAppearance OBJC_CLASS_$_NSAppearance ""
+//go:cgo_import_dynamic objc_msgSend objc_msgSend ""
+//go:cgo_import_dynamic _ _ "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+//go:cgo_import_dynamic _ _ "/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit"
+//go:cgo_import_dynamic _ _ "/usr/lib/libobjc.A.dylib"
+//go:cgo_import_dynamic _ _ "/usr/lib/libSystem.B.dylib"

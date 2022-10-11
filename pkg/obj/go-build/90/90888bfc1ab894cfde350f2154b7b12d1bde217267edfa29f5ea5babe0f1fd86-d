@@ -1,0 +1,9 @@
+# command-line-arguments
+HEADER = -H1 -T0x100001000 -R0x4000
+loadinternal: cannot find runtime/cgo
+36125 symbols, 15746 reachable
+	15674 package symbols, 13566 hashed symbols, 4759 non-package symbols, 2126 external symbols
+69879 liveness data
+archive: ar -q -c -s $WORK/b001/exe/a.out.a /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestArchiveBuildInvokeWithExec3289071051/001/go.o
+invoking archiver with syscall.Exec()
+warning: /Library/Developer/CommandLineTools/usr/bin/ranlib: archive library: $WORK/b001/exe/a.out.a the table of contents is empty (no object file members in the library define global symbols)

@@ -1,0 +1,18 @@
+# test log
+getenv TMPDIR
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestLockNotDroppedByExecCommand1447323121
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestLockNotDroppedByExecCommand1447323121
+open /dev/null
+open /dev/null
+open /dev/null
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/go-build3922993164/b1881/filelock.test
+getenv TMPDIR
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestLockExcludesLock4224769835
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestLockExcludesLock4224769835
+getenv TMPDIR
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestRLockExcludesOnlyLock2389760933
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestRLockExcludesOnlyLock2389760933
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestRLockExcludesOnlyLock2389760933
+getenv TMPDIR
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestLockExcludesRLock2151398847
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestLockExcludesRLock2151398847

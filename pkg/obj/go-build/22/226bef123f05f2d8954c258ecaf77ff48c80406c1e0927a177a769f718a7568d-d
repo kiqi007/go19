@@ -1,0 +1,6 @@
+# test log
+getenv TMPDIR
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/web-TestGetFileURL2652675708
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/web-TestGetFileURL2652675708
+getenv PWD
+open /Users/cengqi/workspace/go19/src/cmd/go/internal/web/nonexistent

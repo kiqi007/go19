@@ -1,0 +1,7 @@
+package issue24161arg
+//go:cgo_import_dynamic CFArrayCreate CFArrayCreate ""
+//go:cgo_import_dynamic CFArrayCreateCopy CFArrayCreateCopy ""
+//go:cgo_import_dynamic objc_msgSend objc_msgSend ""
+//go:cgo_import_dynamic _ _ "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation"
+//go:cgo_import_dynamic _ _ "/usr/lib/libSystem.B.dylib"
+//go:cgo_import_dynamic _ _ "/usr/lib/libobjc.A.dylib"

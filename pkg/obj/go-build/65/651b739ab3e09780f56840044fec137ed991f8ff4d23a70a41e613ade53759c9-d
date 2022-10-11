@@ -1,0 +1,19 @@
+# test log
+getenv TMPDIR
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestToSymbolFunc1415855691/001/3056429696_gccgo_manglechck.go
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestToSymbolFunc1415855691/001/3056429696_gccgo_manglechck.go
+open /dev/null
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/go-build3922993164/b1976/pkgpath.test
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestToSymbolFunc1415855691/001/1812148533_gccgo_manglechck.go
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestToSymbolFunc1415855691/001/1812148533_gccgo_manglechck.go
+open /dev/null
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/go-build3922993164/b1976/pkgpath.test
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestToSymbolFunc1415855691/001/582683893_gccgo_manglechck.go
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestToSymbolFunc1415855691/001/582683893_gccgo_manglechck.go
+open /dev/null
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/go-build3922993164/b1976/pkgpath.test
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestToSymbolFunc1415855691/001/3767094388_gccgo_manglechck.go
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/TestToSymbolFunc1415855691/001/3767094388_gccgo_manglechck.go
+open /dev/null
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T/go-build3922993164/b1976/pkgpath.test
+open /var/folders/64/shs_jv2s7_v1ymd1gzjrwt3w0000gn/T
