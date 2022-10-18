@@ -49,9 +49,9 @@ func handlePanic() {
 	}
 }
 
-// Main parses flags and Go source files specified in the command-line
-// arguments, type-checks the parsed Go package, compiles functions to machine
-// code, and finally writes the compiled package definition to disk.
+// Main 解析命令行参数中指定的标志和Go源文件,
+// 对解析的 Go 包进行类型检查，将函数编译为机器码,
+// 最后将编译好的包定义写入磁盘。
 func Main(archInit func(*ssagen.ArchInfo)) {
 	base.Timer.Start("fe", "init")
 
@@ -185,7 +185,7 @@ func Main(archInit func(*ssagen.ArchInfo)) {
 	typecheck.InitUniverse()
 	typecheck.InitRuntime()
 
-	// Parse and typecheck input.
+	// kiqi: 解析 & 类型检查，输出IR(中间代码表示)
 	noder.LoadPackage(flag.Args())
 
 	// As a convenience to users (toolchain maintainers, in particular),

@@ -5,8 +5,8 @@ package syntax
 import "strconv"
 
 func _() {
-	// An "invalid array index" compiler error signifies that the constant values have changed.
-	// Re-run the stringer command to generate them again.
+	// token.String()方法用字符串数组及偏移位来构造token_name
+	// 一旦常量发生改变，则字符串数组需要重新生成，那么下面这些赋值将会超出index(go:generate stringer)
 	var x [1]struct{}
 	_ = x[_EOF-1]
 	_ = x[_Name-2]
@@ -61,6 +61,7 @@ const _token_name = "EOFnameliteralopop=opop=:=<-*([{)]},;:....breakcasechancons
 
 var _token_index = [...]uint8{0, 3, 7, 14, 16, 19, 23, 24, 26, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 42, 47, 51, 55, 60, 68, 75, 80, 84, 95, 98, 102, 104, 108, 110, 116, 125, 128, 135, 140, 146, 152, 158, 164, 168, 171, 171}
 
+// 如果token超出范围，则是普通的ident，否则，基于_token_index获取到对应的_token_name。
 func (i token) String() string {
 	i -= 1
 	if i >= token(len(_token_index)-1) {

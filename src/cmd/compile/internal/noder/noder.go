@@ -24,6 +24,7 @@ import (
 	"cmd/internal/src"
 )
 
+// LoadPackage 解析 & 类型检查，输出IR(中间代码表示)
 func LoadPackage(filenames []string) {
 	base.Timer.Start("fe", "parse")
 
@@ -38,7 +39,7 @@ func LoadPackage(filenames []string) {
 		noders[i] = &p
 	}
 
-	// Move the entire syntax processing logic into a separate goroutine to avoid blocking on the "sem".
+	// kiqi: 异步完成解析(词法分析和语法分析)
 	go func() {
 		for i, filename := range filenames {
 			filename := filename
@@ -47,6 +48,7 @@ func LoadPackage(filenames []string) {
 			go func() {
 				defer func() { <-sem }()
 				defer close(p.err)
+				// 返回一个PosBase，用于标记文件中内容的位置
 				fbase := syntax.NewFileBase(filename)
 
 				f, err := os.Open(filename)
@@ -56,6 +58,7 @@ func LoadPackage(filenames []string) {
 				}
 				defer f.Close()
 
+				// 解析
 				p.file, _ = syntax.Parse(fbase, f, p.error, p.pragma, syntax.CheckBranches) // errors are tracked via p.error
 			}()
 		}
@@ -63,7 +66,7 @@ func LoadPackage(filenames []string) {
 
 	var lines uint
 	for _, p := range noders {
-		for e := range p.err {
+		for e := range p.err { // 这个err是一个chan接口，只有关闭才会终止循环。
 			p.errorAt(e.Pos, "%s", e.Msg)
 		}
 		if p.file == nil {
@@ -78,7 +81,7 @@ func LoadPackage(filenames []string) {
 		return
 	}
 
-	// Use types2 to type-check and generate IR.
+	// kiqi: 类型检查并生成IR(中间代码表示).
 	check2(noders)
 }
 
