@@ -377,6 +377,7 @@ func (p *parser) print(msg string) {
 // nil; all others are expected to return a valid non-nil node.
 
 // SourceFile = PackageClause ";" { ImportDecl ";" } { TopLevelDecl ";" } .
+// 从tok:package开始执行语法分析，根据顶层定义字段构建相应的noder
 func (p *parser) fileOrNil() *File {
 	if trace {
 		defer p.trace("file")()
@@ -385,11 +386,13 @@ func (p *parser) fileOrNil() *File {
 	f := new(File)
 	f.pos = p.pos()
 
-	// PackageClause
+	// 要求文件的第一个token必须是package
 	if !p.got(_Package) {
 		p.syntaxError("package statement must be first")
 		return nil
 	}
+
+	// 解析包名
 	f.Pragma = p.takePragma()
 	f.PkgName = p.name()
 	p.want(_Semi)
@@ -399,6 +402,7 @@ func (p *parser) fileOrNil() *File {
 		return nil
 	}
 
+	// kiqi: 5. 对各大顶层定义进行解析处理
 	// { ImportDecl ";" }
 	for p.got(_Import) {
 		f.DeclList = p.appendGroup(f.DeclList, p.importDecl)

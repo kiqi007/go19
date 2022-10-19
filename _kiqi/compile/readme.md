@@ -12,3 +12,7 @@
 - [词法解析器](../../src/cmd/compile/internal/syntax/scanner.go#scanner)
 - [Token](../../src/cmd/compile/internal/syntax/tokens.go)
 > [词法解析测试入口](../../src/cmd/compile/internal/syntax/scanner_test.go#TestScanner) 
+#### 语法分析
+- [语法解析入口](../../src/cmd/compile/internal/syntax/syntax.go:67#Parse)
+- [语法解析细节](../../src/cmd/compile/internal/syntax/parser.go#fileOrNil)
+- [stmt](../../src/cmd/compile/internal/syntax/nodes.go)

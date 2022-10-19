@@ -185,7 +185,7 @@ func Main(archInit func(*ssagen.ArchInfo)) {
 	typecheck.InitUniverse()
 	typecheck.InitRuntime()
 
-	// kiqi: 解析 & 类型检查，输出IR(中间代码表示)
+	// kiqi: 2. 解析 & 类型检查，输出IR(中间代码表示)
 	noder.LoadPackage(flag.Args())
 
 	// As a convenience to users (toolchain maintainers, in particular),

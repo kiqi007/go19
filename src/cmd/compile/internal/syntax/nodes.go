@@ -103,7 +103,7 @@ type (
 		Pragma     Pragma
 		Recv       *Field // nil means regular function
 		Name       *Name
-		TParamList []*Field // nil means no type parameters
+		TParamList []*Field // nil means no type parameters(范型参数)
 		Type       *FuncType
 		Body       *BlockStmt // nil means no body (forward declaration)
 		decl

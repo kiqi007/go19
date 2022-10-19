@@ -54,7 +54,7 @@ func main() {
 		os.Exit(2)
 	}
 
-	// kiqi: 编译入口
+	// kiqi: 1. 编译入口
 	gc.Main(archInit)
 	base.Exit(0)
 }

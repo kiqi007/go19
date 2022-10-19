@@ -39,7 +39,7 @@ func LoadPackage(filenames []string) {
 		noders[i] = &p
 	}
 
-	// kiqi: 异步完成解析(词法分析和语法分析)
+	// kiqi: 3 异步完成解析(词法分析和语法分析)
 	go func() {
 		for i, filename := range filenames {
 			filename := filename
@@ -81,7 +81,7 @@ func LoadPackage(filenames []string) {
 		return
 	}
 
-	// kiqi: 类型检查并生成IR(中间代码表示).
+	// kiqi: N 类型检查并生成IR(中间代码表示).
 	check2(noders)
 }
 

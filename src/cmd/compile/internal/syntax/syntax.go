@@ -36,6 +36,7 @@ type ErrorHandler func(err error)
 // A Pragma value augments a package, import, const, func, type, or var declaration.
 // Its meaning is entirely up to the PragmaHandler,
 // except that nil is used to mean “no pragma seen.”
+// 编译指示(like "//go:")
 type Pragma interface{}
 
 // A PragmaHandler is used to process //go: directives while scanning.
@@ -75,8 +76,10 @@ func Parse(base *PosBase, src io.Reader, errh ErrorHandler, pragh PragmaHandler,
 	}()
 
 	var p parser
-	p.init(base, src, errh, pragh, mode)
-	p.next()
+	p.init(base, src, errh, pragh, mode) // 内部初始化一个scanner，用于词法解析获取token
+	p.next()                             // p.scanner.next()
+
+	// kiqi: 4. 语法解析入口
 	return p.fileOrNil(), p.first
 }
 
