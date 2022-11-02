@@ -71,6 +71,8 @@ func (check *Checker) objDecl(obj Object, def *Named) {
 	// (and possibly its value, for constants).
 	// An object's type (and thus the object) may be in one of
 	// three states which are expressed by colors:
+	// 检查obj的声明意味着推断出它的类型（对于常量，可能还有它的值）。
+	// 一个对象的类型（以及该对象）可能处于三种状态之一，这些状态用颜色表示。
 	//
 	// - an object whose type is not yet known is painted white (initial color)
 	// - an object whose type is in the process of being inferred is painted grey
@@ -82,6 +84,8 @@ func (check *Checker) objDecl(obj Object, def *Named) {
 	// ones. White and grey objects may depend on white and black objects.
 	// A dependency on a grey object indicates a cycle which may or may not be
 	// valid.
+	// 在类型推理过程中，一个对象的颜色会从白色到灰色再到黑色（预先声明的对象从一开始就被涂成黑色）。
+	// 一个黑色的对象（即它的类型）只能依赖于（参考）其他黑色的对象。白色和灰色对象可以依赖白色和黑色对象。对一个灰色对象的依赖表示一个循环，这个循环可能是有效的，也可能是无效的。
 	//
 	// When objects turn grey, they are pushed on the object path (a stack);
 	// they are popped again when they turn black. Thus, if a grey object (a
@@ -89,16 +93,21 @@ func (check *Checker) objDecl(obj Object, def *Named) {
 	// it depends on are the remaining objects on that path. Color encoding
 	// is such that the color value of a grey object indicates the index of
 	// that object in the object path.
+	// 当对象变成灰色时，它们被推到对象路径上（一个堆栈）；当它们变成黑色时，它们又被弹出。因此，如果遇到一个灰色的对象，它就在对象路径上，而它所依赖的所有对象都是该路径上的其余对象。
+	// 而灰色对象的颜色值，代表这个对象在对象路径上的索引
 
 	// During type-checking, white objects may be assigned a type without
 	// traversing through objDecl; e.g., when initializing constants and
 	// variables. Update the colors of those objects here (rather than
 	// everywhere where we set the type) to satisfy the color invariants.
+	// 在类型检查过程中，白色对象可能会被分配一个类型而不需要遍历objDecl，例如，在初始化常量和变量时。
+	// 在这里更新这些对象的颜色（而不是在我们设置类型的地方），以满足颜色不变性。
 	if obj.color() == white && obj.Type() != nil {
 		obj.setColor(black)
 		return
 	}
 
+	// kiqi C1: 三色标记法查找循环依赖
 	switch obj.color() {
 	case white:
 		assert(obj.Type() == nil)
@@ -127,8 +136,8 @@ func (check *Checker) objDecl(obj Object, def *Named) {
 		// In the former case, set the type to Typ[Invalid] because
 		// we have an initialization cycle. The cycle error will be
 		// reported later, when determining initialization order.
-		// TODO(gri) Report cycle here and simplify initialization
-		// order code.
+		// TODO(gri) Report cycle here and simplify initialization order code.
+		// 当对象进入时处于grey颜色时，说明发生了循环依赖。 但是目前循环依赖并不在此处report，而是确定初始化周期之后report，因此此处通过变更一些状态做记录
 		switch obj := obj.(type) {
 		case *Const:
 			if !check.validCycle(obj) || obj.typ == nil {
@@ -181,11 +190,11 @@ func (check *Checker) objDecl(obj Object, def *Named) {
 		scope: d.file,
 	}
 
-	// Const and var declarations must not have initialization
-	// cycles. We track them by remembering the current declaration
+	// Const and var declarations must not have initialization cycles. We track them by remembering the current declaration
 	// in check.decl. Initialization expressions depending on other
 	// consts, vars, or functions, add dependencies to the current
 	// check.decl.
+	// kiqi C2: 对包对象做类型检查
 	switch obj := obj.(type) {
 	case *Const:
 		check.decl = d // new package-level const decl

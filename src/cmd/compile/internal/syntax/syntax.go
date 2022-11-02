@@ -79,7 +79,7 @@ func Parse(base *PosBase, src io.Reader, errh ErrorHandler, pragh PragmaHandler,
 	p.init(base, src, errh, pragh, mode) // 内部初始化一个scanner，用于词法解析获取token
 	p.next()                             // p.scanner.next()
 
-	// kiqi: 4. 语法解析入口
+	// kiqi A3: 语法解析入口
 	return p.fileOrNil(), p.first
 }
 

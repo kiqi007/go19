@@ -402,7 +402,7 @@ func (p *parser) fileOrNil() *File {
 		return nil
 	}
 
-	// kiqi: 5. 对各大顶层定义进行解析处理
+	// kiqi A4: 对各大顶层定义进行解析处理
 	// { ImportDecl ";" }
 	for p.got(_Import) {
 		f.DeclList = p.appendGroup(f.DeclList, p.importDecl)

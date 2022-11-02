@@ -84,7 +84,7 @@ func Id(pkg *Package, name string) string {
 	return path + "." + name
 }
 
-// An object implements the common parts of an Object.
+// object：一个对象的公共部分
 type object struct {
 	parent    *Scope
 	pos       syntax.Pos

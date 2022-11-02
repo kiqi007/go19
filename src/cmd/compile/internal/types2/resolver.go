@@ -192,9 +192,7 @@ func (check *Checker) importPackage(pos syntax.Pos, path, dir string) *Package {
 	return nil
 }
 
-// collectObjects collects all file and package objects and inserts them
-// into their respective scopes. It also performs imports and associates
-// methods with receiver base type names.
+// collectObjects 收集所有的文件和包对象，并将他们分类到对应的容器中
 func (check *Checker) collectObjects() {
 	pkg := check.pkg
 	pkg.height = 0
@@ -210,12 +208,15 @@ func (check *Checker) collectObjects() {
 		pkgImports[imp] = true
 	}
 
+	// 对象方法
 	type methodInfo struct {
 		obj  *Func        // method
 		ptr  bool         // true if pointer receiver
 		recv *syntax.Name // receiver type name
 	}
 	var methods []methodInfo // collected methods with valid receivers and non-blank _ names
+
+	// 文件域
 	var fileScopes []*Scope
 	for fileNo, file := range check.files {
 		// The package identifier denotes the current package,
@@ -250,6 +251,7 @@ func (check *Checker) collectObjects() {
 					continue
 				}
 
+				// 对于依赖包，是通过导入(.a)类型的格式化文件的(因此大概不需要类型检查等)，且只有直接导入的才需要做解析，因为需要用到直接导入包的顶级对象声明
 				imp := check.importPackage(s.Path.Pos(), path, fileDir)
 				if imp == nil {
 					continue
@@ -407,7 +409,7 @@ func (check *Checker) collectObjects() {
 					check.declarePkgObj(name, obj, d)
 				}
 
-				// If we have no type, we must have values.
+				// If we have no type, we must have values.(如果没指定type，则必须有value，以推断出类型)
 				if s.Type == nil || values != nil {
 					check.arity(s.Pos(), s.NameList, values, false, false)
 				}
@@ -475,7 +477,7 @@ func (check *Checker) collectObjects() {
 		}
 	}
 
-	// verify that objects in package and file scopes have different names
+	// 验证导入的包名和当前包的顶级对象不重名
 	for _, scope := range fileScopes {
 		for name, obj := range scope.elems {
 			if alt := pkg.scope.Lookup(name); alt != nil {
@@ -494,10 +496,8 @@ func (check *Checker) collectObjects() {
 		}
 	}
 
-	// Now that we have all package scope objects and all methods,
-	// associate methods with receiver base type name where possible.
-	// Ignore methods that have an invalid receiver. They will be
-	// type-checked later, with regular functions.
+	// 已经拥有了所有包作用域对象和所有方法
+	// 为类与这个类的方法建立映射
 	if methods != nil {
 		check.methods = make(map[*TypeName][]*Func)
 		for i := range methods {

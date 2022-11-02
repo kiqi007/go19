@@ -17,8 +17,7 @@ import (
 	"cmd/internal/src"
 )
 
-// checkFiles configures and runs the types2 checker on the given
-// parsed source files and then returns the result.
+// 类型检查入口
 func checkFiles(noders []*noder) (posMap, *types2.Package, *types2.Info) {
 	if base.SyntaxErrors() != 0 {
 		base.ErrorExit()
@@ -39,6 +38,7 @@ func checkFiles(noders []*noder) (posMap, *types2.Package, *types2.Info) {
 		packages: make(map[string]*types2.Package),
 	}
 	conf := types2.Config{
+		Trace:                 true, // kiqi: 开启trace输出(--- go官方使用的话，应该是有一个测试工具做启停的，但咱又不构建呀)
 		Context:               ctxt,
 		GoVersion:             base.Flag.Lang,
 		IgnoreBranchErrors:    true, // parser already checked via syntax.CheckBranches mode
@@ -74,6 +74,7 @@ func checkFiles(noders []*noder) (posMap, *types2.Package, *types2.Info) {
 // check2 type checks a Go package using types2, and then generates IR
 // using the results.
 func check2(noders []*noder) {
+	// kiqi B2: 类型检查，所有noders同属于一个pkg
 	m, pkg, info := checkFiles(noders)
 
 	g := irgen{
@@ -84,6 +85,7 @@ func check2(noders []*noder) {
 		objs:   make(map[types2.Object]*ir.Name),
 		typs:   make(map[types2.Type]*types.Type),
 	}
+	// kiqi N: 中间代码生成
 	g.generate(noders)
 }
 

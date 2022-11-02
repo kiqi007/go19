@@ -16,7 +16,7 @@ import (
 var nopos syntax.Pos
 
 // debugging/development support
-const debug = false // leave on during development
+const debug = true // leave on during development
 
 // exprInfo stores information about an untyped expression.
 type exprInfo struct {
@@ -314,15 +314,22 @@ func (check *Checker) checkFiles(files []*syntax.File) (err error) {
 		}
 	}
 
+	// kiqi B3: 检查file.Package字段，同一个包目录下的所有文件需要同名
 	print("== initFiles ==")
 	check.initFiles(files)
 
+	// kiqi B4: 收集所有的文件和包对象(package, import, var, const, type, func & method)，并将他们填充到check的一些容器中
+	// - 对于direct_import的包，直接读取(.a)的格式化文件的，而对于indirect_import的包，因为不需要使用到顶级声明，在这里是没做读取的
+	// - 这里还会将method关联到对应的type上去
 	print("== collectObjects ==")
 	check.collectObjects()
 
+	// kiqi B5(C): 依次对type，alias，other的定义做类型校验，同时完成类型推断
+	// - 对于函数的执行体，会注册到delay_func中，由B6做检查
 	print("== packageObjects ==")
 	check.packageObjects()
 
+	// kiqi B5(C): 执行delay相关的处理，包括func body的类型检查
 	print("== processDelayed ==")
 	check.processDelayed(0) // incl. all functions
 
